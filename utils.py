@@ -2,7 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def plot_groups(groups, dense, sparse, xlabel, ylabel, title):
-    fig, ax = plt.subplots()
+
+    fig, ax = plt.subplots(figsize=(9, 8))
+
     index = np.arange(len(groups))
     bar_width = 0.35
     opacity = 0.8
@@ -26,10 +28,10 @@ def plot_groups(groups, dense, sparse, xlabel, ylabel, title):
     plt.tight_layout()
     plt.show()
 
-def simple_bar(xlabels, ylabel, title, data):
+def simple_bar(xlabels, ylabel, title, data, size=(8,7)):
     ind = np.arange(len(xlabels))
 
-    plt.figure(figsize=(8, 7))
+    plt.figure(figsize=size)
 
     plt.bar(ind, data, align='center', alpha=0.5)
     plt.xticks(ind, xlabels)
