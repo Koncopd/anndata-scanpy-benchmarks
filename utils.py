@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_groups(groups, dense, sparse, xlabel, ylabel, title):
+def plot_groups(groups, dense, sparse, xlabel, ylabel, title, size=(9, 8)):
 
-    fig, ax = plt.subplots(figsize=(9, 8))
+    fig, ax = plt.subplots(figsize=size)
 
     index = np.arange(len(groups))
     bar_width = 0.35
